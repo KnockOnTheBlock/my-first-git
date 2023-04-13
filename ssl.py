@@ -69,12 +69,15 @@ class LinkedList:
 
         # traverse_all 메소드
         def traverse_all(self):
-                self.first()
                 print('head -> ')
-                for i in range(self.size()):
-                        print(f'({self.current.data}) -> ', end='')
-                        self.next()
-                print('null')                        
+                t_data = self.first()
+                
+                while True:
+                        print(f'({t_data}) -> ', end='')
+                        t_data = self.next()
+                        if t_data = null:
+                                print('null')
+                                break                   
 
         # insert 메소드
         def insert_at(self, position, new_data):
