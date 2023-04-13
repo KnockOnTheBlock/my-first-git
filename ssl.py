@@ -109,14 +109,16 @@ class LinkedList:
         # remove 메소드
         def remove(self, key):
                 r_data = self.first()
-                count = 0
-                while True:
+                count = 1
+                while not r_data == None:
                         if r_data == key:
+                                self.before.next = self.current.next
+                                print(f'{count}번째 원소({key})를 삭제합니다.')
                                 break
                         else:
                                 r_data = self.next()
                                 count += 1
-                                
-                r_data.before.next = r_data.next.next
-                print(f'{count}번째 원소({key})를 삭제합니다.')
+                                continue
+                        
+                        print('해당하는 원소가 없습니다.')
                 
