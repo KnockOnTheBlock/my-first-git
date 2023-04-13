@@ -73,11 +73,12 @@ class LinkedList:
                 t_data = self.first()
                 
                 while True:
+                        if t_data == None:
+                                print('null')
+                                break
                         print(f'({t_data}) -> ', end='')
                         t_data = self.next()
-                        if t_data = null:
-                                print('null')
-                                break                   
+                                       
 
         # insert 메소드
         def insert_at(self, position, new_data):
